@@ -7,11 +7,10 @@ deploy:
   skip-cleanup: true
   keep-history: true
   github-token: $GITHUB_TOKEN
-  local-dir:
   target-branch: gh-pages
   commit_messages: "release: Deploy"
   on: 
-    branch: master
+    branch: main
 notifications:
   email:
     on_success: never
