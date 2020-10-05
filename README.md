@@ -1,5 +1,5 @@
 # AM Web tools
-This project ws created to teach the basics of HTML and CSS.
+This project was created to teach the basics of HTML and CSS.
 
 Go to live version -> [Here](https://bluesmoss.github.io/web-tools/)
 
