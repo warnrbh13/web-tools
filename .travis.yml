@@ -1,13 +1,9 @@
-language: generic 
-git:
-  depth: 3 
 deploy:
   provider: pages
   edge: true,
   skip-cleanup: true
   keep-history: true
   github-token: $GITHUB_TOKEN
-  local-dir: /
   target-branch: gh-pages
   commit_messages: "release: Deploy"
   on: 
