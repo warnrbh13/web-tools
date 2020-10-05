@@ -416,4 +416,8 @@ footer{
     .wrapper{
         width: 100%;
     }
+
+    .resource__list{
+        padding-inline-start: 5px;
+    }
 }
