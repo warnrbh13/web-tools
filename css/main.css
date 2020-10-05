@@ -1,0 +1,413 @@
+/* Custom properties */
+:root{
+    --top-color: #21c08B;
+    --bottom-color: #3283d3;
+    --light-color: #FFFFFF;
+    --purple-color:  #6717cd;
+    --pink-color:  #f313fe;
+    --green-color:  #20d94f;
+    --yellow-color:  #ff9e14;
+    --grey-color:  #454545;
+    --font-color:  #282c34;
+}
+
+/* General styles */
+body {
+    margin: 0px;
+    background: linear-gradient( var(--top-color), var(--bottom-color));
+    height: 100vh;
+    font-family: 'Baloo Thambi 2', cursive;
+    display: flex;
+    justify-content: center;
+    color: var(--font-color);
+}
+
+p{
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+
+.justify-center{
+    text-align: center;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 80%;
+    display: grid;
+    grid-template-rows: 70px minmax(0, 1fr) 50px;
+    background: var(--light-color);
+}
+
+header{
+    border-bottom: 3px solid var(--top-color);
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+}
+
+.header__title{
+    display: flex;
+    font-size: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    font-weight: bold;
+
+}
+
+.header__menu{
+    display: grid;
+    align-items: center;
+    font-weight: bold;
+    color: var(--grey-color);
+}
+
+
+.header__title{
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.header__emoji::before{
+    content: "🔰 ";
+}
+
+.header__text::before{
+    content: "AM";
+}
+
+.header__title:hover > .header__emoji::before{
+    content: "👽";
+}
+
+.header__title:hover > .header__text::before{
+    content: "Weird is good";
+    background: linear-gradient(to left, var(--bottom-color),  var(--top-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;        
+}
+
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.menu li{
+    list-style-type: none;
+}
+
+.menu li:hover > #menu-docs::after{
+    content: "📜";
+}
+
+.menu li:hover > #menu-tools::after{
+    content: "⚡️";
+}
+
+.menu li:hover > #menu-practice::after{
+    content: "👨🏽‍💻";
+}
+
+.menu li:hover > #menu-visual::after{
+    content: "👁️";
+}
+
+.menu li:hover > #menu-contact::after{
+    content: "🌮";
+}
+
+#menu-docs::after{
+    content: "Docs";
+}
+
+#menu-tools::after{
+    content: "Tools";
+}
+
+#menu-practice::after{
+    content: "Practice";
+}
+
+#menu-visual::after{
+    content: "Visual";
+}
+
+#menu-contact::after{
+    content: "Let´s talk";
+}
+
+
+main{
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main::-webkit-scrollbar-track {
+    background-color: white;
+  }
+
+main::-webkit-scrollbar {
+width: 5px;
+}
+
+main::-webkit-scrollbar-thumb {
+background: var(--bottom-color);
+}
+
+/* Description section */
+.description{
+    font-size: 1.5rem;
+}
+
+
+
+.description__funnier{
+    background: linear-gradient(to left, var(--bottom-color),  var(--green-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Resource section */
+
+.resource-container{
+    padding: 20px;
+}
+
+.resource__title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.resource a, .header__menu a, footer a{
+    text-decoration: none;
+}
+
+.resource__item a{
+    font-size: 1.2rem;
+    font-weight:bold;
+    color: var(--grey-color);
+}
+
+.resource li{
+    padding-left: 10px;
+}
+
+.text-purple, .description__lovely, .resource__docs a:hover{
+    background: linear-gradient(to left, var(--purple-color),  var(--pink-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight:bold;
+}
+
+.text-blue,.description__weird, .resource__tools a:hover{
+    background: linear-gradient(to right, var(--bottom-color),  var(--top-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.description__useful, .resource__practice a:hover{
+    background: linear-gradient(to left, var(--yellow-color),  var(--green-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.resource__images a:hover{
+    background: linear-gradient(to left, var(--purple-color),  var(--yellow-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+
+
+.resource__docs .resource__item:hover > .resource__emoji::after,
+.resource__tools .resource__item:hover > .resource__emoji::after,
+.resource__practice .resource__item:hover > .resource__emoji::after,
+.resource__images .resource__item:hover > .resource__emoji::after {
+    font-size: 16px;
+    position: relative;
+    top: -10px;
+    pointer-events: none;
+}
+
+
+.resource__docs .resource__item:hover > .resource__emoji::after {
+    content: "👽";
+}
+
+.resource__tools .resource__item:hover > .resource__emoji::after {
+    content: "‍🚀";
+}
+
+.resource__practice .resource__item:hover > .resource__emoji::after {
+    content: "👾";
+}
+
+.resource__images .resource__item:hover > .resource__emoji::after {
+    content: "🍉";
+}
+
+/* Contact */
+
+.resource__contact{
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='91' height='109' viewport='0 0 100 100' style='fill:black;font-size:55px;'><text y='50%'> 🌮</text></svg>") 16 0,auto;    
+
+}
+
+.contact__title{
+    padding: 20px;
+}
+
+.contact__message{
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    align-items: center;
+}
+
+.message__text{
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.contact__message img {
+    
+    width: 200px;
+    border-radius: 50%;
+    border: 7px solid var(--top-color);
+}
+
+.text-taquitos::after{
+    content: "taquitos";
+    font-size: 3.5rem;
+    background: linear-gradient(to left, var(--pink-color),  var(--yellow-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+
+/* Footer */
+
+footer{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__author{
+    color: var(--bottom-color);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.footer__year{
+    font-weight: bold;
+    color: var(--top-color);
+}
+
+
+/* Media queries */
+@media (max-width: 992px) {
+    header{
+        grid-template-columns: 100px minmax(0, 1fr);
+        border-bottom: 3px solid var(--bottom-color);
+    }
+
+    body{
+        background: linear-gradient(var(--bottom-color), var(--green-color));        
+    }
+    
+    .header__title:hover > .header__text::before{
+        content: "WIG";
+        background: linear-gradient(to left, var(--bottom-color),  var(--top-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;        
+    }
+
+    .contact__message{
+        grid-template-columns: minmax(0, 1fr);
+        text-align: center;
+    }    
+
+}
+
+
+@media (max-width: 768px) {
+    .wrapper{
+        height: 100vh;
+        width: 90%;
+        display: grid;
+        grid-template-rows: 70px minmax(0, 1fr) 40px;
+        background: var(--light-color);
+    }
+
+    header{
+        grid-template-columns: 100px minmax(0, 1fr);
+        border-bottom: 3px solid var(--yellow-color);
+    }
+    /* General styles */
+    body {
+       background: linear-gradient( var(--yellow-color), var(--purple-color));
+    }
+    
+    main::-webkit-scrollbar-thumb {
+        background: var(--purple-color);
+    }
+
+    .resource__title{
+        text-align: center;
+    }
+
+    .menu li:hover > #menu-docs::after{
+        content: "📜";
+    }
+    
+    .menu li:hover > #menu-tools::after{
+        content: "⚡️";
+    }
+    
+    .menu li:hover > #menu-practice::after{
+        content: "👨🏽‍💻";
+    }
+    
+    .menu li:hover > #menu-visual::after{
+        content: "👁️";
+    }
+    
+    .menu li:hover > #menu-contact::after{
+        content: "🌮";
+    }
+    
+    #menu-docs::after{
+        content: "📜";
+    }
+    
+    #menu-tools::after{
+        content: "⚡️";
+    }
+
+    #menu-practice::after{
+        content: "👨🏽‍💻";
+    }
+
+    #menu-visual::after{
+        content: "👁️";
+    }
+
+    #menu-contact::after{
+        content: "🌮";
+    }
+}
