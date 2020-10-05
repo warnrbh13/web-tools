@@ -411,3 +411,9 @@ footer{
         content: "🌮";
     }
 }
+
+@media (max-width: 576px) {
+    .wrapper{
+        width: 100%;
+    }
+}
