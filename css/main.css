@@ -3,6 +3,11 @@
     --top-color: #21c08B;
     --bottom-color: #3283d3;
     --light-color: #FFFFFF;
+    --dark-top-color:#2E0537;
+    --dark-bottom-color:#EB1270;
+    --dark-theme-backgroung: #132639;
+    --dark-theme-text: beige;
+    --dark-theme-titles: #C6CF88;
     --purple-color:  #6717cd;
     --pink-color:  #f313fe;
     --green-color:  #20d94f;
@@ -139,6 +144,41 @@ header{
     content: "Let´s talk";
 }
 
+/* Dark mode */
+
+.mode__label::after{
+    content: "🌙";
+}
+
+#menu-mode:checked + .wrapper .mode__label::after{
+    content: "☀️";
+    color: var(--dark-theme-text);
+}
+
+#menu-mode:checked + .wrapper .menu a{
+    color: var(--dark-theme-text);
+}
+
+#menu-mode:checked + .wrapper{
+    background-color: var(--dark-theme-backgroung);
+    color:var(--dark-theme-text);
+}
+
+#menu-mode:checked + .wrapper .resource__title{
+    color: var(--dark-theme-titles);
+}
+
+#menu-mode:checked + .wrapper .resource__item a{
+    color: var(--dark-theme-titles);
+}
+
+#menu-mode:checked + .wrapper main::-webkit-scrollbar-track{
+    background-color: var(--dark-theme-backgroung);
+}
+
+#menu-mode:checked + .wrapper main::-webkit-scrollbar-thumb{
+    background-color: var(--dark-theme-titles);
+}
 
 main{
     padding: 20px;
